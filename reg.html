@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Patient Registeration</title>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  
+  <script>
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+  </script>
+</head>
+<body>
+<h1> Patient Registeration</h1>
+
+<font size="5" color="red"><em>Note:</em> You must first make official paper registration and get a Medical Record Number <em>(MRN)</em> in order to proceed and get the benefits from our e-Services!</font>
+<br><br>
+
+<form>
+  First name:<br>
+  <input type="text" name="firstname">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname">
+  <br>
+  Medical Record Number:<br>
+  <input type="text" name="medicalrecordnumber">
+  <br>
+  Address:<br>
+  <input type="text" name="address">
+  <br>
+  Mobile Number:<br>
+  <input type="digits" name="mobilenumber">
+  <br>
+
+
+  Date of Birth:<br>
+  <input id="datepicker" />
+  <br>
+  <br><br>
+  <input type="submit" value="Submit">
+<br>
+
+  
+</form>
+ 
+
+
+<form>
+    
+</form>
+</body>
+</html>
