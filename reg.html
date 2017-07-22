@@ -2,60 +2,102 @@
 <html>
 <head>
 <title>Patient Registeration</title>
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-  
-  <script>
-  $(document).ready(function() {
-    $("#datepicker").datepicker();
-  });
-  </script>
+<style type="text/css">
+label{
+float:left;
+width:350px;
+text-align:right;
+padding-right:12px;
+margin-top:12px;
+clear:left;
+}
+input,select{
+margin-top:12px;
+}
+
+#note{
+border: 1px solid darkgreen;
+border-left: 10px solid green;
+padding :15px;
+
+}
+#buttonDiv{
+margin-left:350px;
+padding:12px;
+}
+.textBox:focus{
+background-color:FloralWhite;
+}
+input:invalid {
+    border: 2px solid red;
+}
+#smallNote{
+font-size:10px;
+color:red;
+margin-left:350px;
+padding-left:12px;
+
+}
+</style>
 </head>
 <body>
-<h1> Patient Registeration</h1>
-
-<font size="5" color="red"><em>Note:</em> You must first make official paper registration and get a Medical Record Number <em>(MRN)</em> in order to proceed and get the benefits from our e-Services!</font>
-<br><br>
+<p id="note">
+Note: You must first make official paper registration and get a Medical Record Number <em>(MRN)</em> in order to proceed and get the benefits from our e-Services!</p>
 
 <form>
-  First name:<br>
-  <input type="text" name="firstname">
-  <br><br>
-  Last name:<br>
-  <input type="text" name="lastname">
-  <br><br>
-  Medical Record Number:<br>
-  <input type="text" name="medicalrecordnumber">
-  <br><br>
-  Address:<br>
+  <fieldset>
+  <legend>Patient Registeration</legend>
+  <div>
+ <label for="myName"> First name:</label>
+  <input type="text" name="myName">
+  </div>
+  <div>
+  <label for="myLastName">
+  Last name:</label>
+  <input type="text" name="myLastName">
+  </div>
+  <div>
+  <label for="MedRecordNo">
+  Medical Record Number:</label>
+  <input type="text" name="MedRecordNo">
+ </div>
+ <div>
+ <label for="adddress">
+  Address:</label>
   <input type="text" name="address">
-  <br><br>
-  Mobile Number:<br>
+  </div>
+  <div>
+  <label for="mobileNo">
+  Mobile Number:</label>
   <input type="digits" name="mobilenumber">
-  <br><br>
-  Email Address <br>
+  </div>
+  <div>
+  <label for="email">
+  Email Address </label>
 <input name="UserName" type="text"  />
-<br><br>
-Password : <br>
-<input name="Password" type="password"><br/>
-<br>
-  Date of Birth:<br>
+</div>
+<div>
+<label for ="password">
+Password : </label>
+<input name="Password" type="password">
+</div>
+<label for ="rePassword">
+Retype Password : </label>
+<input name="rePassword" type="password">
+</div>
+<div>
+<label for="DOB">
+  Date of Birth:</label>
   <input id="datepicker" />
-  <br>
-  <p> Note: No need to type the date, just select from the calendar.
-  <br><br>
+  <p id="smallNote"> Note: No need to type the date, just select from the calendar.</p>
+  </div>
+  <div id ="buttonDiv">
   <input type="submit" value="Submit">
-<br>
-
+</div>
+</fieldset>
   
 </form>
  
-
-
-<form>
-    
-</form>
 <a href="sitemap.html">Site Map</a>
 </body>
 </html>
