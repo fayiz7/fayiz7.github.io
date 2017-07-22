@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+label{
+float:left;
+width:350px;
+text-align:right;
+padding-right:12px;
+margin-top:12px;
+clear:left;
+}
+input,select{
+margin-top:12px;
+}
+
+#note{
+border: 1px solid darkgreen;
+border-left: 10px solid green;
+padding :15px;
+
+}
+#buttonDiv{
+margin-left:350px;
+padding:12px;
+}
+.textBox:focus{
+background-color:FloralWhite;
+}
+input:invalid {
+    border: 2px solid red;
+}
+</style>
 <title>Log In Page</title>
 </head>
 
 <body>
 <form name="logIn">
-<p><label>User Name :</label><input name="UserName" type="text" placeholder="Enter Username" required />
-</p>
-<p><label>Password :</label><input name="Password" type="password" placeholder="Enter Password" required><br />
-<input type="checkbox" checked="checked"> Remember me
-</p>
-<a href="reg.html">New User? Register Here.</a>
-<p><input name="LogIn" type="button" value="Login"/></p></form>
-<br>
-<a href="sitemap.html">Site Map</a>
+<fieldset>
+<legend>Log In</legend>
+<div>
+<label>User Name :</label>
+<input name="UserName" type="text" placeholder="Enter Username" class="textBox" />
+</div>
+<div>
+<label>Password :</label>
+<input name="Password" type="password" placeholder="Enter Password" class="textBox" /><br/>
+<label></label><input type="checkbox"> Remember me
+</div>
+
+
+<div id ="buttonDiv"><input name="LogIn" type="button" value="Log In"/></div>
+</fieldset>
+</form>
 </body>
 </html>
