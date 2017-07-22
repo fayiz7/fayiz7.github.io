@@ -1,0 +1,33 @@
+a:link{
+	color:#FF0000;
+}
+
+a:visited{
+	color:#0000FF;
+	text-decoration:overline;
+}
+
+a:active{
+	color:#00FF00;
+}
+
+p:hover{
+	
+	text-transform:uppercase;
+	transform-style:preserve-3d;
+}
+
+input[type=text]:focus {
+	background-color:azure;
+	}
+
+input[type=text]:focus {
+  width: 300px;
+}
+tr:nth-child(odd){
+    background: #98AFC7;
+}
+
+tr:nth-child(even) {
+    background: #FCDFFF;
+}
