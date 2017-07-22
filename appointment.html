@@ -2,41 +2,96 @@
 <html>
 <head>
 <title>Appointment Reservation</title>
+<style type="text/css">
+label{
+float:left;
+width:350px;
+text-align:right;
+padding-right:12px;
+margin-top:12px;
+clear:left;
+}
+input,select{
+margin-top:12px;
+}
+
+#note{
+border: 1px solid darkgreen;
+border-left: 10px solid green;
+padding :15px;
+
+}
+#buttonDiv{
+margin-left:350px;
+padding:12px;
+}
+.textBox:focus{
+background-color:FloralWhite;
+}
+input:invalid {
+    border: 2px solid red;
+}
+</style>
 </head>
 
 <body>
-<h2>Online Appointment Reservation</h2>
-<form>
-<p>Patient Name:<input type="text"/></p>
-<p>Clinic:
-<select name="clinic">
+<p id="note"><b>note :</b> please fill the form below and click reserve button to reserve an appointment.</p>
+<form id="forms">
+<fieldset>
+<legend>Online Appointment Reservation</legend>
+<div>
+<label for="myName">Patient Name:</label>
+<input name ="myName" id="myName" class="textBox" type="text"/>
+</div>
+<div>
+<label for="clinic">Clinic:</label>
+<select name="clinic" id ="clinic">
 <option value="clinic1">clinic 1</option>
 <option value="clinic2">clinic 2</option>
 <option value="clinic3">clinic 3</option>
-</select></p>
-<p>Doctor:
-<select name="Doctor">
+</select>
+</div>
+<div>
+<label for="drName">Doctor:</label>
+<select name="drName" id="drName">
 <option>Dr 1</option>
 <option>Dr 2</option>
 <option>Dr 3</option>
-</select></p>
-
-<p>Preferred Time:
-  <input type="radio" name="Morning" value="Morning"> Morning
-  <input type="radio" name="Evening" value="Evening"> Evening
-</p>
-<p>Telephone Number:<input name="TelephoneNumber" type="text"></p>
-<p>Medical Record No:<input name="MedicalRecordNo" type="text"></p>
-<p>Appointment Date :<input name="AppointmentDate" type="text"></p>
-<p>Patient Type:
-<select name="PatientType">
-<option value="SelectPatient">SelectPatient</option>
+</select>
+</div>
+<div>
+<label for="prefTime">Preferred Time:</label>
+  <input type="radio" name="Morning" id="Morning" value="Morning"> Morning
+  <input type="radio" name="Evening" id="Evening" value="Evening"> Evening
+</div>
+<div>
+<label for ="telephoneNumber">Telephone Number:</label>
+<input name="telephoneNumber" id="telephoneNumber" class="textBox" type="text">
+</div>
+<div>
+<label for ="medicalRecordNo">Medical Record No:</label>
+<input name="medicalRecordNo" id = "medicalRecordNo" class="textBox" type="text">
+</div>
+<div>
+<label for="appointmentDate">Appointment Date :</label>
+<input name="appointmentDate" class="textBox" type="text">
+</div>
+<div>
+<label for= "PatientType">Patient Type:</label>
+<select name="patientType" id ="PatientType">
+<option value="SelectPatient">Select Patient</option>
 <option value="RegisteredPatient">Registered Patient</option>
 <option value="NewPatient">New Patient</option>
-</select></p>
-<p>E-mail Address:<input name="E-mailAddress" type="text"></p>
-<p><input name="submit" type="button" value="submit"></p>
-
+</select>
+</div>
+<div>
+<label for="email">E-mail Address:</label>
+<input name="email" id ="email" class="textBox" type="email">
+</div>
+<div id ="buttonDiv">
+<input name="reserve" type="button" value="Reserve">
+</div>
+</fieldset>
 </form>
 <a href="sitemap.html">Site Map</a>
 </body>
