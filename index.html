@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="style/style.css">
 <title>Log In Page</title>
-<link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
 <form name="logIn">
-<p><label>User Name :</label><input name="UserName" type="text" placeholder="Enter Username" required />
-</p>
-<p><label>Password :</label><input name="Password" type="password" placeholder="Enter Password" required><br />
-<input type="checkbox" checked="checked"> Remember me
-</p>
-<a href="reg.html">New User? Register Here.</a>
-<p><input name="LogIn" type="button" value="Login"/></p></form>
-<br>
-<a href="sitemap.html">Site Map</a>
+<fieldset>
+<legend>Log In</legend>
+<div>
+<label>User Name :</label>
+<input name="UserName" type="text" placeholder="Enter Username" class="textBox" />
+</div>
+<div>
+<label>Password :</label>
+<input name="Password" type="password" placeholder="Enter Password" class="textBox" /><br/>
+<label></label><input type="checkbox"> Remember me
+</div>
+
+
+<div id ="buttonDiv"><input name="LogIn" type="button" value="Log In"/></div>
+</fieldset>
+</form>
 </body>
 </html>
