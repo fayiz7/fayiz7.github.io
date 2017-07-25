@@ -1,0 +1,72 @@
+a:link{
+	color:#0000EE;
+}
+
+a:visited{
+	color:##551A8B;
+}
+
+a:active{
+	color:#EE0000 ;
+}
+
+p:hover{
+	
+	text-transform:uppercase;
+	transform-style:preserve-3d;
+}
+body {
+    background-color: azure;
+	text-align:left;
+	padding:16px;
+	margin:16px;
+}
+input[type=text]:focus {
+	background-color:azure;
+	}
+
+input[type=text]:focus {
+  width: 300px;
+}
+tr:nth-child(odd){
+    background: #98AFC7;
+}
+
+tr:nth-child(even) {
+    background: #FCDFFF;
+}
+label{
+float:left;
+width:350px;
+text-align:right;
+padding-right:12px;
+margin-top:12px;
+clear:left;
+}
+input,select{
+margin-top:12px;
+}
+
+#note{
+border: 1px solid darkgreen;
+border-left: 10px solid green;
+padding :15px;
+color:red;
+}
+#buttonDiv{
+margin-left:350px;
+padding:12px;
+}
+.textBox:focus{
+background-color:FloralWhite;
+}
+input:invalid {
+    border: 2px solid red;
+}
+#smallNote{
+font-size:10px;
+color:red;
+margin-left:350px;
+padding-left:12px;
+
+}
