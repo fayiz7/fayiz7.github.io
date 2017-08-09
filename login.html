@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" type="text/css" href="style/style.css">
-<title>Log In Page</title>
-<script src="js/logIn.js"></script>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <title>Log In Page</title>
+  <script src="js/logIn.js"></script>
 </head>
 
 <body>
-<form name="logIn" method="post">
-<fieldset>
-<legend>Log In</legend>
-<div>
-<label>User Name :</label>
-<input name="UserName" type="text" placeholder="Enter Username" class="textBox" />
-</div>
-<div>
-<label>Password :</label>
-<input name="Password" type="password" placeholder="Enter Password" class="textBox" required/><br/>
-<label></label><input type="checkbox"> Remember me
-</div>
+  <form name="logIn" method="post">
+    <fieldset>
+      <legend>Log In</legend>
+      <div>
+        <label>User Name :</label>
+        <input name="UserName" type="text" placeholder="Enter Username" class="textBox" />
+      </div>
+      <div>
+        <label>Password :</label>
+        <input name="Password" type="password" placeholder="Enter Password" class="textBox" required/><br/>
+        <label></label><input type="checkbox"> Remember me
+      </div>
 
 
-<div id ="buttonDiv"><input name="LogIn" type="button" value="Log In" onclick="return validateLogIn()"/></div>
-</fieldset>
-</form>
+      <div id="buttonDiv"><input name="LogIn" type="button" value="Log In" onclick="return validateLogIn()" /></div>
+    </fieldset>
+  </form>
 </body>
+
 </html>

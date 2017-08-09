@@ -11,7 +11,7 @@ a:active{
 }
 
 p:hover{
-	
+
 	text-transform:uppercase;
 	transform-style:preserve-3d;
 }
@@ -22,7 +22,7 @@ body {
 	margin:16px;
 }
 input[type=text]:focus {
-	background-color:azure;
+	background-color:#98FB98;
 	}
 
 input[type=text]:focus {
