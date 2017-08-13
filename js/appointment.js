@@ -1,3 +1,5 @@
+
+
 var addrow = function(event) {
   var row = document.createElement('tr');
   var seq = document.createElement('td');
@@ -11,6 +13,18 @@ var addrow = function(event) {
   var action = document.createElement('td');
   var del = document.createElement('button');
 
+  if(pname.value.length >= 3 && pdate.value.length >= 3){
+	var mb = new RegExp("^[0-9]{10}$");
+	var mr = new RegExp("^[0-9]{6}$");
+    if (!mb.test(pmobile.value)) {
+      alert('Phone number should be 10 digits ');
+      return false;
+    }
+    if (!mr.test(prnum.value)) {
+      alert('Medical record number should be 6 digits ');
+      return false;
+    }
+	  
   seq.innerHTML = view.childElementCount + 1;
   name.innerHTML = pname.value;
   recnumber.innerHTML = prnum.value;
@@ -18,9 +32,6 @@ var addrow = function(event) {
   clinic.innerHTML = gotselected;
   preffedTime.innerHTML = document.querySelector('#prefTime option:checked').value;
   pattype.innerHTML = document.querySelector('#PatientType option:checked').value;
-  // window.alert();
-  // doctor.innerHTML = pdoctor.value;
-  // pattype.innerHTML = ptype.value;
   date.innerHTML = pdate.value;
   mobile.innerHTML = pmobile.value;
   del.innerHTML = "Delete";
@@ -45,4 +56,8 @@ var addrow = function(event) {
   view.appendChild(row);
   myform.reset();
 
+}else{
+	alert('Please fill the name and appointment date dd/mm/yyyy ')
+}
+return false;
 };
