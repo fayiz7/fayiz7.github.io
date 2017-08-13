@@ -19,23 +19,18 @@
       <div>
         <label for="clinic">Clinic:</label>
         <select name="clinic" id="clinic">
-<option value="clinic1">clinic 1</option>
-<option value="clinic2">clinic 2</option>
-<option value="clinic3">clinic 3</option>
+<option value="General Outpatient Clinic">General Outpatient Clinic</option>
+<option value="Polyclinic ">Polyclinic </option>
+<option value="Specialist Clinic ">Specialist Clinic </option>
 </select>
       </div>
       <div>
-        <label for="drName">Doctor:</label>
-        <select name="drName" id="drName">
-<option value="Ahmed">Dr 1</option>
-<option value="Ali">Dr 2</option>
-<option value="Adel">Dr 3</option>
+        <label for="prefTime">Preffered Time:</label>
+        <select name="prefTime" id="prefTime">
+<option value="Morning">Morning</option>
+<option value="Afternoon ">Afternoon </option>
+<option value="Evening ">Evening </option>
 </select>
-      </div>
-      <div>
-        <label for="prefTime">Preferred Time:</label>
-        <input type="radio" name="Morning" id="Morning" value="Morning"> Morning
-        <input type="radio" name="Evening" id="Evening" value="Evening"> Evening
       </div>
       <div>
         <label for="telephoneNumber">Telephone Number:</label>
@@ -53,8 +48,8 @@
         <label for="PatientType">Patient Type:</label>
         <select name="patientType" id="PatientType">
 <option value="SelectPatient">Select Patient</option>
-<option value="RegisteredPatient">Registered Patient</option>
-<option value="NewPatient">New Patient</option>
+<option value="Registered Patient">Registered Patient</option>
+<option value="New Patient">New Patient</option>
 </select>
       </div>
       <div>
@@ -67,14 +62,14 @@
     </fieldset>
   </form>
   <h2>Appointments Schedual</h2>
-  <table id="appointments">
+  <table id="appointments" border="2">
     <thead>
       <tr>
         <th>seq#</th>
         <th>Name</th>
         <th>Record Number</th>
         <th>Clinic</th>
-        <th>Doctor</th>
+        <th>Preferred Time</th>
         <th>Patient Type</th>
         <th class="center">Date</th>
         <th class="center">Mobile</th>
@@ -86,20 +81,17 @@
     </tbody>
   </table>
   <script type="text/javascript">
-    var myform, prnum, pname, pclinic, pdoctor, ptype, pdate, pmobile, btn, view;
-
+    var myform, prnum, pname, ptype, pdate, pmobile, btn, view, gotselected, prefTime;
     window.onload = function() {
+
       myform = document.querySelector('#forms');
-      prnum = document.querySelector('#medicalRecordNo');
-      pname = document.querySelector('#myName');
-      pclinic = document.querySelector('#clinic');
-      pdoctor = document.querySelector('#drNmae');
-      ptype = document.querySelector('#PatientType');
+      prnum = document.querySelector('input[name=medicalRecordNo]');
+      pname = document.querySelector('input[name=myName]');
+      // ptype = document.querySelector('input[name=PatientType]');
       pdate = document.querySelector('input[name=appointmentDate]');
-      pmobile = document.querySelector('#telephoneNumber');
+      pmobile = document.querySelector('input[name=telephoneNumber]');
       btn = document.querySelector('input[type=button]');
       view = document.querySelector('#app-list');
-
       btn.addEventListener('click', addrow);
     };
   </script>
