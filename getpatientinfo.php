@@ -2,9 +2,9 @@
 
 require_once('dbCon.php');
 
-$query = "SELECT fname, lname,mobile, mrecno, dob FROM patient";
+$query = "SELECT fname, lname, mobile, mrecno, dob FROM patientInfo";
 
-$response = @mysqli_query($dbcon, $query);
+$response = @mysqli_query($dbc, $query);
 
 if($response){
  
@@ -35,11 +35,11 @@ echo '</table>';
  
 echo "Couldn't issue database query<br />";
  
-echo mysqli_error($dbcon);
+echo mysqli_error($dbc);
  
 }
  
-mysqli_close($dbcon);
+mysqli_close($dbc);
  
 
 
