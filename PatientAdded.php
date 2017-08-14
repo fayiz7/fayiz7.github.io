@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
     
     $data_missing = array();
     
-    if(empty($_POST['first_name'])){
+    if(empty($_POST['fname'])){
  
         
         $data_missing[] = 'First Name';
@@ -19,11 +19,11 @@ if(isset($_POST['submit'])){
     } else {
  
         
-        $f_name = trim($_POST['myName']);
+        $f_name = trim($_POST['fName']);
  
     }
  
-    if(empty($_POST['myLastName'])){
+    if(empty($_POST['lname'])){
  
         
         $data_missing[] = 'Last Name';
@@ -31,11 +31,11 @@ if(isset($_POST['submit'])){
     } else{
  
         
-        $l_name = trim($_POST['myLastName']);
+        $l_name = trim($_POST['lname']);
  
     }
 	
-	if(empty($_POST['mobilenumber'])){
+	if(empty($_POST['mobile'])){
  
         
         $data_missing[] = 'Mobile Number';
@@ -43,12 +43,12 @@ if(isset($_POST['submit'])){
     } else{
  
         
-        $m_no = trim($_POST['mobilenumber']);
+        $m_no = trim($_POST['mobile']);
  
     }
 
 	
-	if(empty($_POST['MedRecordNo'])){
+	if(empty($_POST['mrecno'])){
  
         
         $data_missing[] = 'Medical Record Number';
@@ -56,7 +56,7 @@ if(isset($_POST['submit'])){
     } else{
  
         
-        $mr_no = trim($_POST['MedRecordNo']);
+        $mr_no = trim($_POST['mrecno']);
  
     }
 
@@ -77,7 +77,7 @@ if(isset($_POST['submit'])){
         
         require_once('dbCon.php');
         
-        $query = "INSERT INTO patient.patientInfo (myName, myLastName, mobilenumber, MedRecordNo, dob) VALUES (?, ?, ?, ?, ?)";
+        $query = "INSERT INTO patient.patientInfo (fname, lname, mobile, mrecno, dob) VALUES (?, ?, ?, ?, ?)";
         
         $stmt = mysqli_prepare($dbc, $query);
         
@@ -126,17 +126,17 @@ if(isset($_POST['submit'])){
   <legend>Patient Registeration</legend>
   <div>
  <label> First name:</label>
-  <input type="text" name="myName" onfocus = "noteText(0)" onblur = "noteText(9)"/>
+  <input type="text" name="fname" onfocus = "noteText(0)" onblur = "noteText(9)"/>
   </div>
   <div>
   <label>
   Last name:</label>
-  <input type="text" name="myLastName" onfocus = "noteText(1)" onblur = "noteText(9)"/>
+  <input type="text" name="lname" onfocus = "noteText(1)" onblur = "noteText(9)"/>
   </div>
   <div>
   <label>
   Medical Record Number:</label>
-  <input type="text" name="MedRecordNo" onfocus = "noteText(2)" onblur = "noteText(9)"/>
+  <input type="text" name="mrecno" onfocus = "noteText(2)" onblur = "noteText(9)"/>
  </div>
  <div>
  <label>
@@ -146,7 +146,7 @@ if(isset($_POST['submit'])){
   <div>
   <label>
   Mobile Number:</label>
-  <input type="number" name="mobilenumber" onfocus = "noteText(4)" onblur = "noteText(9)"/>
+  <input type="number" name="mobile" onfocus = "noteText(4)" onblur = "noteText(9)"/>
   </div>
   <div>
   <label>
@@ -170,7 +170,7 @@ Retype Password : </label>
   </div>
   <div><p id="help"></p></div>
   <div id ="buttonDiv">
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit" />
 </div>
 </fieldset>
   

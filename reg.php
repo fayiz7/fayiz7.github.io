@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Patient Registeration</title>
-  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <link rel="stylesheet" type="text/css" href="style/style.css">
   <script src="js/regForm.js"></script>
 
 </head>
@@ -15,17 +15,17 @@ Note: You must first make official paper registration and get a Medical Record N
   <legend>Patient Registeration</legend>
   <div>
  <label> First name:</label>
-  <input type="text" name="myName" onfocus = "noteText(0)" onblur = "noteText(9)"/>
+  <input type="text" name="fname" onfocus = "noteText(0)" onblur = "noteText(9)"/>
   </div>
   <div>
   <label>
   Last name:</label>
-  <input type="text" name="myLastName" onfocus = "noteText(1)" onblur = "noteText(9)"/>
+  <input type="text" name="lname" onfocus = "noteText(1)" onblur = "noteText(9)"/>
   </div>
   <div>
   <label>
   Medical Record Number:</label>
-  <input type="text" name="MedRecordNo" onfocus = "noteText(2)" onblur = "noteText(9)"/>
+  <input type="text" name="mrecno" onfocus = "noteText(2)" onblur = "noteText(9)"/>
  </div>
  <div>
  <label>
@@ -35,7 +35,7 @@ Note: You must first make official paper registration and get a Medical Record N
   <div>
   <label>
   Mobile Number:</label>
-  <input type="number" name="mobilenumber" onfocus = "noteText(4)" onblur = "noteText(9)"/>
+  <input type="number" name="mobile" onfocus = "noteText(4)" onblur = "noteText(9)"/>
   </div>
   <div>
   <label>
